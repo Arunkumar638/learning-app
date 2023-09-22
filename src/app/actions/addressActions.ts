@@ -11,7 +11,7 @@ export const getStates = async()=>{
        'Content-Type': 'application/json',
        'Access-Control-Allow-Origin': "*"
      },
-     timeout: 5000, // Set a timeout of 5 seconds (adjust as needed)
+     timeout: 5000, 
    })
      .then((response) => {
 
@@ -37,7 +37,7 @@ export const getCountry = async()=>{
        'Content-Type': 'application/json',
        'Access-Control-Allow-Origin': "*"
      },
-     timeout: 5000, // Set a timeout of 5 seconds (adjust as needed)
+     timeout: 5000, 
    })
      .then((response) => {
 
@@ -64,7 +64,7 @@ export const saveAddress = async(data: { DoorNo:String, Street:String,City:Strin
           'Access-Control-Allow-Origin': "*"
         },
         data:data,
-        timeout: 5000, // Set a timeout of 5 seconds (adjust as needed)
+        timeout: 5000,
       })
         .then((response) => {
 
