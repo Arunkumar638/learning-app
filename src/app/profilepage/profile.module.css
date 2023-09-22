@@ -247,3 +247,23 @@
     color: white;
     padding: 0 20px;
 }
+
+.close{
+    position: absolute;
+    top:10px;
+    left:300px; 
+    cursor: pointer;
+    }
+    .clear{
+      position: absolute;
+      top:10px;
+      left:285px; 
+      cursor: pointer;
+      
+    }
+    .save{
+      position: absolute;
+      top:10px;
+      left: 270px;
+      cursor: pointer;  
+      }

@@ -3,7 +3,7 @@
 import React,{useState, useEffect} from 'react';
 import Avatar from 'react-avatar';
 import AddressPopupForm from './addressform'
-import {removeacc, getUser} from '../actions/userActions';
+import {removeacc, getUser, updateUser} from '../actions/userActions';
 import DeleteUser from'./deleteuser';
 import styles from './profile.module.css'
 import { useRouter } from 'next/navigation';
@@ -53,6 +53,7 @@ export const content = ()=>{
     };
     const handleSubmit = (e: any) =>{
       e.preventDefault();
+      updateUser(details);
     };
     return(
       <div>
@@ -169,8 +170,6 @@ export const content = ()=>{
       saveAddress(address);
 
     };
-
-
 
     return(
       <div>
