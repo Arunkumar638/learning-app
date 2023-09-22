@@ -5,6 +5,7 @@ import React,{useState} from 'react';
 import {content, address} from './profilecontent'
 
 const VerticalTabs = ({ tabs }:any) => {
+  
   const [activeTab, setActiveTab] = useState(0);
 
   return (
@@ -32,10 +33,8 @@ const VerticalTabs = ({ tabs }:any) => {
   );
 };
 
-
-
-
 export default function profilepage(){
+
   const tabs = [
     {
       label: 'Profile',

@@ -5,8 +5,6 @@ import { BiRename, BiSolidUserCircle, BiPhoneCall} from 'react-icons/bi';
 import{ FaRegEnvelope } from 'react-icons/fa';
 import{ CgRename } from 'react-icons/cg';
 import{ MdPassword } from 'react-icons/md';
-import{FaUserGraduate} from 'react-icons/fa6';
-import { getuser } from '../profilepage/profilecontent';
 import React from 'react';
 import styles from '../style.module.css'
 import {save} from '../actions/userActions'
@@ -60,7 +58,7 @@ export default function signUp(){
     e.preventDefault();
     details.phoneNumber = code + details.phoneNumber;
     save(details);
-    getuser(details.email);
+  
   };
     return(
       <>

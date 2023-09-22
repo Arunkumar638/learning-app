@@ -31,7 +31,7 @@ export const save = async(data: { firstName: String; email: String; password: St
 
 export const loginAction = async(data: {email: String; password: String; })=>{ 
 
-    axios({
+    return axios({
      method: 'post',
      url: 'http://192.168.1.48:8080/onlinelearning/login',
      headers: { 
@@ -43,18 +43,10 @@ export const loginAction = async(data: {email: String; password: String; })=>{
    })
      .then((response) => {
 
-       console.log(response.data);
-       alert(response.data);
+       console.log("sfhgderj", response.data);
+       return response.data;
 
      })
-     .catch((error) => {
-       console.error('Error:', error);    
-       if (error.response) {
-         alert(error.response.data);
-         console.log('Response data:', error.response.data);
-         console.log('Response status:', error.response.status);
-       }     
-   });  
 }
 
 export const forgotAction = async(data: {email: String; })=>{ 
@@ -110,7 +102,7 @@ export const resetAction = async(data:{token:String;password:String;})=>{
    });  
 }
 
-export  function removeacc(Email:any){
+export function removeacc(Email:any){
  
       axios({
           method: 'delete',
@@ -138,11 +130,11 @@ export  function removeacc(Email:any){
   
   }
 
-  export function getUser({Email,res}:any){
+  export function getUser(email:String){
 
-      axios({
+      return axios({
           method: 'get',
-          url: `http://192.168.1.48:8080/onlinelearning/user-details/${Email}`,
+          url: `http://192.168.1.48:8080/onlinelearning/user-details/${email}`,
           headers: { 
             'Content-Type': 'application/json',
             'Access-Control-Allow-Origin': "*"
@@ -152,6 +144,7 @@ export  function removeacc(Email:any){
           .then((response) => {
   
             console.log(response.data);
+            return response.data;
     
           })
           .catch((error) => {

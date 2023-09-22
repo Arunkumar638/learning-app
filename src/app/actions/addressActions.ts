@@ -4,7 +4,7 @@ import axios from "axios";
 
 export const getStates = async()=>{ 
 
-    axios({
+    return axios({
      method: 'get',
      url: 'http://192.168.1.48:8080/onlinelearning/states',
      headers: { 
@@ -16,6 +16,7 @@ export const getStates = async()=>{
      .then((response) => {
 
        console.log(response.data);
+       return response.data;
      })
      .catch((error) => {
        console.error('Error:', error);    
@@ -29,7 +30,7 @@ export const getStates = async()=>{
 
 export const getCountry = async()=>{ 
 
-    axios({
+    return axios({
      method: 'get',
      url: 'http://192.168.1.48:8080/onlinelearning/country',
      headers: { 
@@ -41,6 +42,7 @@ export const getCountry = async()=>{
      .then((response) => {
 
        console.log(response.data);
+       return response.data;
      })
      .catch((error) => {
        console.error('Error:', error);    
@@ -66,7 +68,7 @@ export const saveAddress = async(data: { DoorNo:String, Street:String,City:Strin
       })
         .then((response) => {
 
-          alert(response.data);
+          console.log(response.data);
         })
         .catch((error) => {
           console.error('Error:', error);    

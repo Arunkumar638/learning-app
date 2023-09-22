@@ -1,15 +1,17 @@
 "use client"
 
-import React from 'react';
+import React,{useState} from 'react';
 import { useRouter } from 'next/navigation'
 import {FaLinkedin, FaGoogle, FaFacebookF, FaRegEnvelope} from 'react-icons/fa';
 import {MdLockOutline} from 'react-icons/md';
 import {loginAction} from '../actions/userActions';
 import styles from '../style.module.css';
+import { error } from 'console';
 
 export default function login() {
   const router = useRouter();
-  const [details, setDetails] = React.useState({
+  const [isLoginFailed, setLoginStatus] = useState(false);
+  const [details, setDetails] = useState({
     email:"",
     password:""
   });
@@ -30,7 +32,12 @@ export default function login() {
   }
   const handleSubmit = (e: any) =>{
     e.preventDefault();
-    loginAction(details);
+    loginAction(details).then(()=>{
+      router.push('/dashboard');
+    }).catch((error)=>{
+      setLoginStatus(true)
+    console.log("Error");
+    })
 
   };
   const navup = ()=>{
@@ -80,6 +87,11 @@ export default function login() {
               <div>
               <button onClick={clear} className={styles.pagebutton}>Clear</button>
               <button id='clear' onClick={handleSubmit} className={styles.pagebutton}>Sign in</button>
+              {
+                isLoginFailed && (
+                  <div>Invalid Credentials</div>
+                )
+              }
           </div>
           </div>
       </div>

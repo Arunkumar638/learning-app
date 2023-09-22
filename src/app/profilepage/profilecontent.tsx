@@ -1,6 +1,6 @@
 "use client"
 
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import Avatar from 'react-avatar';
 import AddressPopupForm from './addressform'
 import {removeacc, getUser} from '../actions/userActions';
@@ -9,6 +9,7 @@ import styles from '../style.module.css'
 import { useRouter } from 'next/navigation';
 import {saveAddress, getStates, getCountry} from '../actions/addressActions';
 var res = '';
+
 export const content = ()=>{
     const [isPopupVisible, setIsPopupVisible] = useState(false);
     var [details, setDetails] = useState({
@@ -19,7 +20,15 @@ export const content = ()=>{
       email:"",
       password:""
     });
-     
+    
+    useEffect(()=>{
+        getUser("arunkumar98svn@gmail.com").then((data)=>{
+            console.log(data);
+            if(!data) return;
+            setDetails(data);
+        })
+    }, [])
+
     const clear = ()=>{
       setDetails({
         firstName:"", 
@@ -30,7 +39,7 @@ export const content = ()=>{
         password:""
       });
     }
-    const yes = ()=>{
+    const success = ()=>{
       const router = useRouter();
       removeacc(details.email)
       router.push('/');
@@ -99,7 +108,7 @@ export const content = ()=>{
       </main>
       <DeleteUser trigger={isPopupVisible}>
       <h2 className={styles.headertext4}>Are you Sure</h2><br/><br/>
-      <button onClick={yes} className={styles.yes}>Yes</button>
+      <button onClick={success} className={styles.yes}>Yes</button>
       <button onClick={()=> setIsPopupVisible(false)} className={styles.no}>No</button>
     </DeleteUser>
     </div>
@@ -117,19 +126,25 @@ export const content = ()=>{
    
     });
   
-    var States = [
-      { text: 'State',value: '' },
-      { text: "Male", value: "male" },
-      { text: "Female", value: "female" },
-  
-    ];
-  
-    const [selected, setSelected] = React.useState(States[0].value);
+    const [stateList,setStateList] = useState([]);
+    const [selected, setSelected] = useState("");
+    const [countryList, setCountry] = useState("")
+
+    useEffect(()=>{
+        getStates().then((data)=>{
+            setStateList(data);
+        })
+        getCountry().then((data)=>{
+            setCountry(data);
+        })
+    },[])
+
     const optionChange = (event:any) => {
       setSelected(event.target.value);
-      address.State = event.target.value
     };
   
+
+
     const clear = ()=>{
       setAddress({
       DoorNo:"", 
@@ -140,6 +155,7 @@ export const content = ()=>{
       });
     }
      
+
     const handleChange = (e: any) => {
       const { name, value } = e.target;
       setAddress({
@@ -147,21 +163,21 @@ export const content = ()=>{
         [name]: value,
       });
     };
+
     const handleSubmit = (e: any) =>{
-  
       e.preventDefault();
       saveAddress(address);
-      getStates();
-      getCountry();
-  
+
     };
+
+
+
     return(
       <div>
         <main>
         <h2 className={styles.headertext3}>User Address</h2><br/><br/>
         <button className={styles.profileButton1} onClick={() => setIsPopupVisible(true)} >+ Add new Address</button>   
-        {/* <textarea>
-          </textarea>      */}
+           
         </main>
         <AddressPopupForm trigger={isPopupVisible}>
           <button  onClick={handleSubmit}>
@@ -200,9 +216,9 @@ export const content = ()=>{
            
             <div id='option'>
                  <select value={selected} onChange={optionChange} className={styles.states}>
-                   {States.map(option => (
-                   <option key={option.value} value={option.value}>
-                   {option.text}
+                   {stateList.map(option => (
+                   <option key={option} value={option}>
+                   {option}
                     </option>
                    ))}
                  </select>
@@ -213,7 +229,7 @@ export const content = ()=>{
            <div className={styles.input}>
   
             <div className={styles.in} />
-            <input type='text' name='Country' onChange={handleChange}value={address.Country}  placeholder='Country' className='bg-gray-100 outline-none text-sm flex-1' required/>
+            <input type='text' name='Country' onChange={handleChange}value={countryList}  placeholder='Country' className='bg-gray-100 outline-none text-sm flex-1' required disabled/>
            </div>
         </AddressPopupForm>
       </div>
@@ -221,7 +237,4 @@ export const content = ()=>{
     );
   }
 
-  export const getuser = (email: any)=>{
-   
-    getUser({email,res});
-  }
+  
