@@ -1,7 +1,7 @@
 "use client"
 
 import react from 'react';
-import styles from '../profilecard.module.css';
+import styles from './profilecard.module.css';
 import Avatar from 'react-avatar';
 import { useRouter } from 'next/navigation';
 

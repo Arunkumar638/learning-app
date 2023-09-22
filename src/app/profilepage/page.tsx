@@ -1,11 +1,11 @@
 "use client"
 
-import styles from '../style.module.css'
+import styles from './profile.module.css'
 import React,{useState} from 'react';
 import {content, address} from './profilecontent'
 
 const VerticalTabs = ({ tabs }:any) => {
-  
+
   const [activeTab, setActiveTab] = useState(0);
 
   return (

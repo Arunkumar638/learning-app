@@ -5,7 +5,7 @@ import Avatar from 'react-avatar';
 import AddressPopupForm from './addressform'
 import {removeacc, getUser} from '../actions/userActions';
 import DeleteUser from'./deleteuser';
-import styles from '../style.module.css'
+import styles from './profile.module.css'
 import { useRouter } from 'next/navigation';
 import {saveAddress, getStates, getCountry} from '../actions/addressActions';
 var res = '';

@@ -6,7 +6,7 @@ import{ FaRegEnvelope } from 'react-icons/fa';
 import{ CgRename } from 'react-icons/cg';
 import{ MdPassword } from 'react-icons/md';
 import React from 'react';
-import styles from '../style.module.css'
+import styles from './signup.module.css'
 import {save} from '../actions/userActions'
 import { useRouter } from 'next/navigation';
 

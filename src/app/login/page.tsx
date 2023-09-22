@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation'
 import {FaLinkedin, FaGoogle, FaFacebookF, FaRegEnvelope} from 'react-icons/fa';
 import {MdLockOutline} from 'react-icons/md';
 import {loginAction} from '../actions/userActions';
-import styles from '../style.module.css';
+import styles from './login.module.css';
 import { error } from 'console';
 
 export default function login() {

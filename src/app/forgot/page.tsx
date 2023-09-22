@@ -4,7 +4,7 @@
 import{FaRegEnvelope} from 'react-icons/fa';
 import React from 'react';
 import {forgotAction} from '../actions/userActions'
-import styles from '../style.module.css'
+import styles from './forgot.module.css'
 import { useRouter } from 'next/navigation';
 
 export default function forgot(){

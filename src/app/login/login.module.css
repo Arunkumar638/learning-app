@@ -1,0 +1,201 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    flex: 1 1 0%;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+
+.card{
+    border-radius: 1rem;
+    display: flex;
+    width:66.666667%;
+    max-width: 56rem;
+    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    --tw-bg-opacity: 1;
+    background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+  }
+
+  .color{
+    --tw-text-opacity: 1;
+    color: rgb(251 113 133 / var(--tw-text-opacity));
+  }  
+
+  .align1{
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .align2{
+    display: flex;
+    justify-content: space-between;
+    width: 16rem;
+    margin-bottom: 1.25rem;
+  }
+  
+.align3{
+    width: 80%;
+    padding: 1.25rem;
+}
+
+.headertext{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    --tw-text-opacity: 1;
+    color: rgb(251 113 133 / var(--tw-text-opacity));
+}
+
+.underline{
+    border-width: 2px;
+    width:2.5rem;
+    display:inline-block;
+    margin-bottom: 0.5rem;
+    --tw-text-opacity: 1;
+    border-color: rgb(251 113 133 / var(--tw-text-opacity));
+}
+
+.link{
+  border-width: 2px;
+  border-radius: 9999px;
+  padding: 0.75rem;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  --tw-border-opacity: 1;
+  border-color: rgb(229 231 235 / var(--tw-border-opacity));
+}
+
+
+.align{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input3{
+    display: flex;
+    width: 16rem;
+    align-items: center;
+    margin-bottom: 3rem;
+    padding: 0.5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
+.icon{
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+    margin-right: 0.20rem;
+  }
+.input{
+    display: flex;
+    width: 16rem;
+    align-items: center;
+    margin-bottom: 0.75rem;
+    padding: 0.5rem;
+    --tw-bg-opacity: 1;
+    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+  }
+  
+.in{
+    --tw-text-opacity: 1;
+    color: rgb(156 163 175 / var(--tw-text-opacity));
+    margin-right: 0.25rem;
+}
+
+.textsize{
+    font-size: 0.875rem/* 14px */;
+    line-height: 1.25rem/* 20px */;
+  }
+.pagebutton:hover{
+    --tw-text-opacity: 1;
+    background-color: rgb(251 113 133 / var(--tw-text-opacity));
+    color: white;
+}
+.pagebutton{
+    --tw-text-opacity: 1;
+    color: rgb(251 113 133 / var(--tw-text-opacity));
+    display: inline-block;
+    padding-left: 3rem;
+    padding-right: 3rem; 
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+    border-width: 2px;
+    margin-left: 0.75rem;
+    border-color: rgb(251 113 133 / var(--tw-text-opacity));
+    border-radius: 9999px;
+
+}
+
+.headertext1{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.underline1{
+    border-width: 2px;
+    width:2.5rem;
+    display:inline-block;
+    margin-bottom: 0.5rem;
+    color: white;
+}
+
+.signupbutton:hover{
+    --tw-text-opacity: 1;
+    color: rgb(251 113 133 / var(--tw-text-opacity));
+    background-color: white;
+}
+.signupbutton{
+    color: white;
+    display: inline-block;
+    padding-left: 3rem;
+    padding-right: 3rem; 
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-weight: 600;
+    border-width: 2px;
+    margin-left: 0.75rem;
+    border-color: white;
+    border-radius: 9999px;
+}
+
+.signup{
+  width:40%;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  padding-top: 9rem;
+  padding-bottom: 9rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  --tw-bg-opacity: 1;
+  background-color: rgb(251 113 133 / var(--tw-bg-opacity));
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
