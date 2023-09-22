@@ -1,0 +1,80 @@
+.profileCard {
+    display: flex;
+    position: absolute;
+    margin-top: 320px;
+    margin-left: 450px;
+    top: 10%;
+    left: 50%;
+    transform: translate(-1%, -60%);
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 90px;
+    padding-bottom: 120px;
+    background:linear-gradient(#ffafbd,#ffc3a0);
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(43, 17, 160, 0.1);
+  }
+  
+  .show {
+    display: inline-block;
+  }
+  
+  .hide {
+    display: none;
+  }
+  
+  .cardContent {
+    text-align: center;
+    margin-top: 120px;
+  }
+  .button{
+    background-color: #ffafbd;
+  }
+  .closeButton {
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    font-size: 16px;
+    line-height: 10px;
+    font-weight: 600;
+    border-radius: 8px;
+    padding: 14px 24px;
+    margin-top: 60px;
+    margin-left: 150px;
+    border: none;
+    transition: box-shadow 0.2s ease 0s, -ms-transform 0.1s ease 0s, -webkit-transform 0.1s ease 0s, transform 0.1s ease 0s;
+    background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+    color: #fff;
+  }
+
+  .profileButton{
+    display: inline-block;
+    outline: 0;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    font-weight: 600;
+    line-height: 10px;
+    border-radius: 8px;
+    font-size: 14px;
+    height: 38px;
+    margin-top: 60px;
+    margin-right: 20px;
+    background:linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
+    color: white;
+    padding: 0 20px;
+  }
+  .profileButton.hover {
+    background-color: #772ce8;
+  }
+  .closeButton:hover {
+    background-color: #d32f2f;
+  }
+
+  .avatar{
+    position: absolute;
+    margin-left: 62px;
+    margin-bottom: 60px;
+  }
+  

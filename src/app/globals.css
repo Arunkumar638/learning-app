@@ -1,6 +1,6 @@
 @tailwind base;
 @tailwind components;
-@tailwind utilities;
+@tailwind utilities; 
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -16,12 +16,42 @@
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+
+#con{
+  margin-top: 130px;
 }
+#back{
+  background: linear-gradient(#ffafbd,#ffc3a0);
+}
+#dash{
+  background: linear-gradient(#ffafbd,#ffc3a0);
+}
+#item{
+ margin-left: 45px;
+}
+
+#signup{
+  margin-left: 15px;
+}
+#clear{
+  margin-left: 20px;
+}
+
+#option{
+margin-right: 175px;
+}
+
+#code{
+  position: absolute;
+  height: 20px;
+  width:30px;
+  margin-top: 135px;
+  margin-right: 300px;
+}
+
+#text{
+  position: absolute;
+  margin-top: 15px;
+  margin-left: 70px;
+}
+
