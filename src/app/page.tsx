@@ -3,7 +3,8 @@
 import React from 'react';
 import { useRouter } from 'next/navigation'
 import styles from './style.module.css'
-export default function Home() {
+
+ function Home() {
   
   const router = useRouter();
   const navgot = ()=>{
@@ -26,3 +27,5 @@ export default function Home() {
   )
   
 }
+
+export default Home;

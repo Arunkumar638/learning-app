@@ -5,7 +5,7 @@ import { BiRename, BiSolidUserCircle, BiPhoneCall} from 'react-icons/bi';
 import{ FaRegEnvelope } from 'react-icons/fa';
 import{ CgRename } from 'react-icons/cg';
 import{ MdPassword } from 'react-icons/md';
-import React from 'react';
+import React,{useState} from 'react';
 import styles from './signup.module.css'
 import {save} from '../actions/userActions'
 import { useRouter } from 'next/navigation';
@@ -13,7 +13,7 @@ import { useRouter } from 'next/navigation';
 export default function signUp(){
   const router = useRouter();
   var code = '+91-';
-  var [details, setDetails] = React.useState({
+  var [details, setDetails] = useState({
     firstName:"", 
     lastName:"",
     gender:"",
@@ -31,7 +31,7 @@ export default function signUp(){
     { text: "Female", value: "female" },
 
   ];
-  const [selected, setSelected] = React.useState(genderNames[0].value);
+  const [selected, setSelected] = useState(genderNames[0].value);
   const optionChange = (event:any) => {
     setSelected(event.target.value);
     details.gender = event.target.value
@@ -58,7 +58,7 @@ export default function signUp(){
     e.preventDefault();
     details.phoneNumber = code + details.phoneNumber;
     save(details);
-  
+    clear();
   };
     return(
       <>
@@ -106,7 +106,7 @@ export default function signUp(){
                </select>
                </div>
                <input value={code} id='code' disabled/>
-               <div className={styles.input1}>
+               <div className={styles.input}>
                   <BiPhoneCall/>
                  <div className={styles.in} />
                  <input type='text' onChange={handleChange} value={details.phoneNumber} name='phoneNumber' placeholder='phoneNumber' className='bg-gray-100 outline-none text-sm flex-1 w-20' required/>
@@ -126,7 +126,7 @@ export default function signUp(){
               <input type='text' onChange={handleChange} value={details.userName} name='userName' placeholder='UserName' className='bg-gray-100 outline-none text-sm flex-1' required/>
               </div> */}
 
-                <div className={styles.input2}>
+                <div className={styles.input}>
                  <MdPassword/>
                  <div className={styles.in} />
               

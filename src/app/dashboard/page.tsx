@@ -5,8 +5,9 @@ import Card from './profilecard';
 import styles from './dashboard.module.css'
 import Avatar from 'react-avatar';
 import Image from 'next/image';
- 
-export default function dashboard(){
+
+
+function Dashboard(){
     const [isProfileCardOpen, setIsProfileCardOpen] = useState(false);
 
     const handleToggleProfileCard = () => {
@@ -20,16 +21,12 @@ export default function dashboard(){
             <div>
 
             <span id='text' className='text-rose-400 font-serif text-lg'>Gyro Learn</span> 
-             <div className="w-12 h-18 rounded-full overflow-hidden">
-              <Image src='/Assets/logo.png' alt="Avatar" width={60} height={60} className="object-cover" />
-             </div>
+            <Avatar src='../Assets/logo.png' className={styles.clear} round size='45'></Avatar>
             </div>
 
             <div>
             <button onClick={handleToggleProfileCard}>
-             <div className="w-16 h-16 rounded-full overflow-hidden">
-              <Image src='/Assets/images.png' alt="Avatar" width={64} height={64} className="object-cover" />
-             </div>
+            <Avatar src='../Assets/images.png' className={styles.clear} round size='50'></Avatar>
             </button>
              <Card isOpen={isProfileCardOpen} onClose={handleToggleProfileCard}/>
             </div>
@@ -39,3 +36,5 @@ export default function dashboard(){
 
     );
 }
+
+export default Dashboard;

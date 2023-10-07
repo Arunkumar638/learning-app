@@ -29,7 +29,7 @@ export default function reset(){
     resetAction(details);
   };
     return(
-    
+      
         <div className={styles.header} id='back'>
             <div className={styles.main1}  id='con'>
             <div className={styles.card1} >

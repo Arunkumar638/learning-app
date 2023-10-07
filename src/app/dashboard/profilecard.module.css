@@ -78,3 +78,9 @@
     margin-bottom: 60px;
   }
   
+  .close{
+    position: absolute;
+    top:10px;
+    left:170px; 
+    cursor: pointer;
+    }

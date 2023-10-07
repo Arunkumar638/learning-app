@@ -8,7 +8,8 @@ import {loginAction} from '../actions/userActions';
 import styles from './login.module.css';
 import { error } from 'console';
 
-export default function login() {
+
+ function login() {
   const router = useRouter();
   const [isLoginFailed, setLoginStatus] = useState(false);
   const [details, setDetails] = useState({
@@ -32,10 +33,11 @@ export default function login() {
   }
   const handleSubmit = (e: any) =>{
     e.preventDefault();
-    loginAction(details).then(()=>{
-      router.push('/dashboard');
-    }).catch((error)=>{
-      setLoginStatus(true)
+    loginAction(details).then((data)=>{
+      alert(data)
+    })
+    .catch((error)=>{
+      setLoginStatus(true);
     console.log("Error");
     })
 
@@ -109,3 +111,5 @@ export default function login() {
   )
   
 }
+
+export default login;

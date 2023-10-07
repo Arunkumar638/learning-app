@@ -3,9 +3,7 @@ import styles from './profile.module.css'
 
 
   const AddressPopupForm = (props:any) => {
-
-      
-    
+ 
       return (props.trigger)?(
         <div className={styles.popup}>
           <div className={styles.popupInner}>
