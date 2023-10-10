@@ -3,7 +3,7 @@
 
 import{FaRegEnvelope} from 'react-icons/fa';
 import React from 'react';
-import {forgotAction} from '../actions/userActions'
+import {forgotAction} from '../../actions/userActions'
 import styles from './forgot.module.css'
 import { useRouter } from 'next/navigation';
 
@@ -15,12 +15,7 @@ export default function forgot(){
   const navback = ()=>{
     router.push('/login');
   }
-//   const clear = ()=>{
-//     setDetails({
 
-//       email:"",
-//     });
-//   }
   const handleChange = (e: any) => {
     const { name, value } = e.target;
     setDetails({

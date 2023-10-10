@@ -6,8 +6,8 @@ import{ FaRegEnvelope } from 'react-icons/fa';
 import{ CgRename } from 'react-icons/cg';
 import{ MdPassword } from 'react-icons/md';
 import React,{useState} from 'react';
-import styles from './signup.module.css'
-import {save} from '../actions/userActions'
+import styles from '../../styles/signup.module.css'
+import {save} from '../../actions/userActions'
 import { useRouter } from 'next/navigation';
 
 export default function signUp(){
@@ -57,7 +57,9 @@ export default function signUp(){
   const handleSubmit = (e: any) =>{
     e.preventDefault();
     details.phoneNumber = code + details.phoneNumber;
-    save(details);
+    save(details).then((data)=>{
+      alert(data.msg);
+    });
     clear();
   };
     return(

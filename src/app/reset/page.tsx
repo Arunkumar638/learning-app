@@ -3,7 +3,7 @@
 import React from 'react';
 import {MdLockOutline} from 'react-icons/md';
 import {GiToken} from 'react-icons/gi';
-import {resetAction} from '../actions/userActions'
+import {resetAction} from '../../actions/userActions'
 import styles from './reset.module.css'
 import { useRouter } from 'next/navigation';
 

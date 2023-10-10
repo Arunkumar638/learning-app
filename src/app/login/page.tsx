@@ -4,8 +4,8 @@ import React,{useState} from 'react';
 import { useRouter } from 'next/navigation'
 import {FaLinkedin, FaGoogle, FaFacebookF, FaRegEnvelope} from 'react-icons/fa';
 import {MdLockOutline} from 'react-icons/md';
-import {loginAction} from '../actions/userActions';
-import styles from './login.module.css';
+import {loginAction} from '../../actions/userActions';
+import styles from '../../styles/login.module.css';
 import { error } from 'console';
 
 
@@ -34,11 +34,15 @@ import { error } from 'console';
   const handleSubmit = (e: any) =>{
     e.preventDefault();
     loginAction(details).then((data)=>{
-      alert(data)
+      console.log(data);
+      alert(data.msg);
+      const token  = data.token
+      console.log(token);
+      localStorage.setItem('token',token);
     })
     .catch((error)=>{
       setLoginStatus(true);
-    console.log("Error");
+    console.log("Error",error);
     })
 
   };
@@ -88,7 +92,7 @@ import { error } from 'console';
               </div>
               <div>
               <button onClick={clear} className={styles.pagebutton}>Clear</button>
-              <button id='clear' onClick={handleSubmit} className={styles.pagebutton}>Sign in</button>
+              <button id='clear' onClick={handleSubmit} className={styles.pagebutton}>Sign in</button><br/>
               {
                 isLoginFailed && (
                   <div>Invalid Credentials</div>
