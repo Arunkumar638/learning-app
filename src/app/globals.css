@@ -18,9 +18,7 @@
 }
 
 
-#con{
-  margin-top: 130px;
-}
+
 #back{
   background: linear-gradient(#ffafbd,#ffc3a0);
 }
@@ -36,18 +34,6 @@
 }
 #clear{
   margin-left: 20px;
-}
-
-#option{
-margin-right: 175px;
-}
-
-#code{
-  position: absolute;
-  height: 20px;
-  width:30px;
-  margin-top: 135px;
-  margin-right: 300px;
 }
 
 #text{

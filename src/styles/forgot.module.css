@@ -1,41 +1,11 @@
-.header{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
 
 .main1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    flex: 1 1 0%;
     padding-left: 5rem;
     padding-right: 5rem;
     text-align: center;
-}
-
-.card1{
-    border-radius: 1rem;
-    display: flex;
-    width: 75%;
-    max-width: 42rem;
-    --tw-bg-opacity: 1;
-    --tw-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-    --tw-shadow-colored: 0 25px 50px -12px var(--tw-shadow-color);
-    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
-    background-color: rgb(229 231 235 / var(--tw-bg-opacity));
-}
-
-.align3{
-    width: 80%;
-    padding: 1.25rem;
 }
 
 .headertext{
@@ -54,28 +24,6 @@
     margin-bottom: 0.5rem;
     --tw-text-opacity: 1;
     border-color: rgb(251 113 133 / var(--tw-text-opacity));
-}
-
-.align{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.input3{
-    display: flex;
-    width: 16rem;
-    align-items: center;
-    margin-bottom: 3rem;
-    padding: 0.5rem;
-    --tw-bg-opacity: 1;
-    background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
-.in{
-    --tw-text-opacity: 1;
-    color: rgb(156 163 175 / var(--tw-text-opacity));
-    margin-right: 0.25rem;
 }
 
 .pagebutton:hover{

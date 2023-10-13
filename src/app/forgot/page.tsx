@@ -4,8 +4,9 @@
 import{FaRegEnvelope} from 'react-icons/fa';
 import React from 'react';
 import {forgotAction} from '../../actions/userActions'
-import styles from './forgot.module.css'
+import styles from '../../styles/forgot.module.css'
 import { useRouter } from 'next/navigation';
+import { Card, Input, Space, Select } from 'antd';
 
 export default function forgot(){
   const router = useRouter();
@@ -28,36 +29,25 @@ export default function forgot(){
     forgotAction(details);
   };
     return(
-    
-        <div className={styles.header} id='back'>
-            <div className={styles.main1}  id='con'>
-            <div className={styles.card1} >
-     <div className={styles.align3} id="item">
-     <div className='py-10'>
-        <h2 className={styles.headertext}>Verify Email</h2>
-        <div className={styles.underline}></div>
-        <div className='flex justify-center my-2'> 
-        </div>
-        </div>
-        <div className={styles.align}>
-              
-              <div className={styles.input3}>
-              <FaRegEnvelope />
-              <div className={styles.in} />
-              
-              <input type='email' onChange={handleChange} value={details.email} name='email' placeholder='Email' className='bg-gray-100 outline-none text-sm flex-1' required/>
-              </div>
+        <div className='bg-gradient-to-r from-orange to-coral flex flex-col h-screen'>
+        <div className={styles.main1}>
+         <Card className='mt-forgot p-forgot'>
+             <div className='py-10'>
+                <h2 className={styles.headertext}>Verify Email</h2>
+                <div className={styles.underline}></div>                   
+             </div>           
+           <Space direction="vertical">
+             
+             <Input placeholder="Email" type='email' prefix={<FaRegEnvelope />} onChange={handleChange} value={details.email} name='email' required/>
+ 
+            </Space><br/><br/>   
+          <div className='mt-4'>           
+           <button onClick={navback} className={styles.pagebutton}>Back</button>
+           <button onClick={handleSubmit}  className={styles.pagebutton}>Verify</button>
+          </div>   
+        </Card>
+       </div>
+     </div>
 
-          </div>
-
-          <button onClick={navback} className={styles.pagebutton}>Back</button>
-          {/* <button onClick={clear} className='border-2 border-rose-400 rounded-full px-12 py-2 ml-3 inline-block font-semibold hover:bg-rose-400 hover:text-white'>Clear</button> */}
-              <button onClick={handleSubmit} id='signup' className={styles.pagebutton}>Verify</button>
-
-            </div>
-            </div>
-            </div>
-        </div>
-        
     )
 }

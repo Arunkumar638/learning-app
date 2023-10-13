@@ -8,30 +8,41 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      utilities: {
-        '.custom-button': {
-          display: 'inline-block',
-          outline: 0,
-          border: 'none',
-          cursor: 'pointer',
-          position: 'absolute',
-          'font-weight': 600,
-          'line-height': '10px',
-          'border-radius': '8px',
-          'font-size': '14px',
-          height: '38px',
-          'margin-left': '1300px',
-          background: 'linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%)',
-          color: 'white',
-          padding: '0 20px',
-        },
-      
+      colors:{
+        'dark-purple':'#081A51',
+        'light-white':'rgba(255,255,255,0.18)',
+        'light-yellow':'#FFC371',
+        'light-grey':'#bdc3c7',
+        'coral':'#ff5e62',
+        'orange':'#ff9966',
+        'lavender':'#E9E4F0',
+        'blue':'#0575E6'
+      },
+      width:{
+        'card':'80%',
+        'code':'25px',
+        'option':'40%'
+      },
+      height:{
+        'code':'10px'
+      },
+      padding:{
+        'card':'1.25rem',
+        'forgot':'3rem'
+      },
+      margin:{
+        'align':'100px',
+        'card':'45px',
+        'option':'175px',
+        'signup':'15px',
+        'forgot':'150px'
+      },     
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
-    },
+    
     },
   },
   plugins: [],

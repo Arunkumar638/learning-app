@@ -6,8 +6,9 @@ import {FaLinkedin, FaGoogle, FaFacebookF, FaRegEnvelope} from 'react-icons/fa';
 import {MdLockOutline} from 'react-icons/md';
 import {loginAction} from '../../actions/userActions';
 import styles from '../../styles/login.module.css';
-import { error } from 'console';
-
+import { Card, Input, Space, Select } from 'antd';
+import{ MdPassword } from 'react-icons/md';
+import { EyeInvisibleOutlined, EyeTwoTone } from '@ant-design/icons';
 
  function login() {
   const router = useRouter();
@@ -54,7 +55,7 @@ import { error } from 'console';
   }
   return (
     
-    <div className={styles.header} id='back'>
+    <div className='bg-gradient-to-r from-orange to-coral flex flex-col h-screen'>
       
     <main className={styles.main}>
       <div className={styles.card} >
@@ -77,18 +78,20 @@ import { error } from 'console';
           </a>
           </div>
           <p className='text-gray-400 my-3'>or use your email account</p>
-          <div className={styles.align}>
-            <div className={styles.input}>
-              <FaRegEnvelope className={styles.icon} />
-              <input type='email'onChange={handleChange} value={details.email} name='email' placeholder='Email' className='bg-gray-100 outline-none text-sm flex-1' required/>
-              </div>
-              <div className={styles.input}>
-              <MdLockOutline className={styles.icon} />
-              <input type='password' onChange={handleChange} value={details.password} name='password' placeholder='Password' className='bg-gray-100 outline-none text-sm flex-1' required/>
-              </div>
+          <div>
+          <Space direction="vertical">
+          <Input placeholder="Email" type='email' prefix={<FaRegEnvelope />} onChange={handleChange} value={details.email} name='email' required/>
+                <Input.Password                  
+                    placeholder="Password"
+                    name='password'
+                    prefix={<MdPassword/>}
+                    onChange={handleChange}
+                    value={details.password}
+                    iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
+                    />
+          </Space>
               <div className={styles.align2}>
-                
-                <button onClick={navgot} className='text-xs text-rose-400'>Forgot password?</button>             
+                <button onClick={navgot} className='text-xs text-rose-400 ml-2 mt-2'>Forgot password?</button>             
               </div>
               <div>
               <button onClick={clear} className={styles.pagebutton}>Clear</button>
