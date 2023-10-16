@@ -36,10 +36,8 @@ export default function forgot(){
                 <h2 className={styles.headertext}>Verify Email</h2>
                 <div className={styles.underline}></div>                   
              </div>           
-           <Space direction="vertical">
-             
+           <Space direction="vertical">           
              <Input placeholder="Email" type='email' prefix={<FaRegEnvelope />} onChange={handleChange} value={details.email} name='email' required/>
- 
             </Space><br/><br/>   
           <div className='mt-4'>           
            <button onClick={navback} className={styles.pagebutton}>Back</button>

@@ -79,7 +79,6 @@ export default function signUp(){
                  <Input placeholder="LastName" prefix={<BiRename />} onChange={handleChange} value={details.lastName} name='lastName' required/> 
                  <div className='mr-option'>
                   <select value={selected} onChange={optionChange} className='w-20 h-7'>
-                  {/* <Select defaultValue="Zhejiang" options={genderNames} value={details.gender} onChange={handleChange} /> */}
                  {genderNames.map(option => (
                  <option key={option.value} value={option.value}>
                  {option.text}
