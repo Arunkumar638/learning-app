@@ -127,7 +127,7 @@ import { UserOutlined, UserAddOutlined, EyeInvisibleOutlined, EyeTwoTone, PhoneO
           />
           <Input placeholder='Phone Number' size='large' name='phoneNumber' onChange={handleSignupChange} value={signupDetails.phoneNumber} prefix={<PhoneOutlined/>} className={styles.input1}/><br/>
           <select value={selected} onChange={optionChange} 
-          className='w-content h-7 mt-6 mr-select rounded-lg bg-white shadow-lg text-grey font-roboto'>
+          className={styles.dropdown}>
                  {genderNames.map(option => (
                  <option key={option.value} value={option.value}>
                  {option.text}
