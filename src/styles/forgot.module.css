@@ -1,48 +1,63 @@
-
 .main1{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-left: 5rem;
-    padding-right: 5rem;
+    justify-content: center;
+    flex: 1 1 0%;
+    padding: 0rem 5rem;
     text-align: center;
+    margin-bottom: 5rem;
 }
 
 .headertext{
+    color: #0B409c;
     font-size: 1.875rem;
-    line-height: 2.25rem;
     font-weight: 700;
-    margin-bottom: 0.5rem;
-    --tw-text-opacity: 1;
-    color: rgb(251 113 133 / var(--tw-text-opacity));
+    font-family: 'Roboto Slab Variable', sans-serif;
+}
+.input1{
+    width: 80%;
+    --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+    font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+    color: #a3a8ab;
+    border:none;
+    margin-top: 3rem;
+    gap: 0.5rem; 
+  }
+
+.align{
+    justify-content: center;
+    margin-top: 5%;
+    align-items: center;
+    gap: 3rem;
 }
 
-.underline{
-    border-width: 2px;
-    width:2.5rem;
-    display:inline-block;
-    margin-bottom: 0.5rem;
-    --tw-text-opacity: 1;
-    border-color: rgb(251 113 133 / var(--tw-text-opacity));
-}
-
-.pagebutton:hover{
-    --tw-text-opacity: 1;
-    background-color: rgb(251 113 133 / var(--tw-text-opacity));
+.button{
+    background-color: #0B409c;
+    width: 80%;
+    height: 40px;
+    margin-top: 2.5rem;
     color: white;
+    font-size:0.875rem;
+    line-height: 1.25rem;
+    font-family: 'Roboto Slab Variable', sans-serif;
 }
-.pagebutton{
-    --tw-text-opacity: 1;
-    color: rgb(251 113 133 / var(--tw-text-opacity));
-    display: inline-block;
-    padding-left: 3rem;
-    padding-right: 3rem; 
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    font-weight: 600;
-    border-width: 2px;
-    margin-left: 0.75rem;
-    border-color: rgb(251 113 133 / var(--tw-text-opacity));
-    border-radius: 9999px;
 
+.button1{
+    font-size:0.875rem;
+    line-height: 1.25rem;
+    color: #0B409c;
+    margin-right: 70%;
+    margin-top: 1rem;
+    font-weight: 600;
+    font-family: Roboto Slab Variable, sans-serif;
+}
+
+.card{
+    padding: 1.25rem;
+    margin-top: 175px;
+    width: 33%;
+    color:#f2f7ff;
 }

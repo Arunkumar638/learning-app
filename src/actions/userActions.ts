@@ -30,7 +30,7 @@ export const save = async(data: { firstName:String; lastName:String; gender:Stri
 
 }
 
-export const loginAction = async(data: {email: String; password: String; })=>{ 
+export const loginAction = async(data: {userEmail: String; userPassword: String; })=>{ 
 
     return axios({
      method: 'post',
