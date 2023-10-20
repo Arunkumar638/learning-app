@@ -28,7 +28,8 @@ const config: Config = {
         'code':'25px',
         'option':'33%',
         'content':'22%',
-        'button':'80%',
+        'button':'60%',
+        'bottom-element':'80%'
       },
       height:{
         'code':'10px',

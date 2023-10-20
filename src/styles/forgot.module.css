@@ -21,7 +21,7 @@
     font-family: 'Roboto Slab Variable', sans-serif;
     color: #a3a8ab;
     border:none;
-    margin-top: 3rem;
+    margin-top: 1.5rem;
     gap: 0.5rem; 
   }
 
@@ -36,7 +36,7 @@
     background-color: #0B409c;
     width: 80%;
     height: 40px;
-    margin-top: 2.5rem;
+    margin-top: 3rem;
     color: white;
     font-size:0.875rem;
     line-height: 1.25rem;
@@ -57,5 +57,5 @@
     padding: 1.25rem;
     margin-top: 175px;
     width: 33%;
-    color:#f2f7ff;
+    background-color:#f2f7ff;
 }

@@ -2,7 +2,7 @@
 
 import React from 'react';
 import {MdLockOutline} from 'react-icons/md';
-import { EyeInvisibleOutlined, EyeTwoTone, ReloadOutlined } from '@ant-design/icons';
+import { EyeInvisibleOutlined, EyeTwoTone, SyncOutlined } from '@ant-design/icons';
 import {GiToken} from 'react-icons/gi';
 import {resetAction} from '../../actions/userActions';
 import styles from '../../styles/reset.module.css';
@@ -34,8 +34,8 @@ export default function reset(){
       <Col>
       <main className={styles.main1}>
       <Card className={styles.card}>
-      <Col className={styles.align}>
       <h3 className={styles.headertext}>Reset Password</h3>
+      <Col className={styles.align}>
       <Input 
       placeholder='Reset Token' 
       size='large' 
@@ -54,7 +54,7 @@ export default function reset(){
           onChange={handleChange}
           iconRender={(visible) => (visible ? <EyeTwoTone /> : <EyeInvisibleOutlined />)}
           />
-      <Button className={styles.button} onClick={handleSubmit} icon={<ReloadOutlined size={20}/>}>Reset</Button>
+      <Button className={styles.button} onClick={handleSubmit} icon={<SyncOutlined size={20}/>}>Reset</Button>
       <button onClick={navback} className={styles.button1}>Back</button><br/>
       </Col>
       </Card>

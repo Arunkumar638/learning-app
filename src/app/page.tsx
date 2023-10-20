@@ -34,7 +34,7 @@ import {CopyrightOutlined} from '@ant-design/icons';
               the right place. Learn top software programming languages to
               sharpen your coding skills. No local setup needed. Online
               content, Online editor and online compiler</p>
-             <Button className='w-button mt-7 bg-pale-yellow'>Start your 7 days free trail</Button>            
+             <Button className='w-button mt-7 bg-pale-yellow text-sm font-roboto text-dark-blue font-medium'>Start your 7 days free trail</Button>            
         </Col>
       </Row>
       <Row className='bg-dark-blue h-content'>

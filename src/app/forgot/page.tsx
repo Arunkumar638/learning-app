@@ -31,9 +31,16 @@ export default function forgot(){
     <Col>
     <main className={styles.main1}>
     <Card className={styles.card}>
-    <Col className={styles.align}>
     <h3 className={styles.headertext}>Verify Email</h3>
-    <Input placeholder='Email' size='large' name='email' onChange={handleChange} value={details.email} prefix={<MailOutlined/>} className={styles.input1}/>
+    <Col className={styles.align}>
+    <Input 
+    placeholder='Email' 
+    size='large' 
+    name='email' 
+    onChange={handleChange} 
+    value={details.email} 
+    prefix={<MailOutlined/>} 
+    className={styles.input1}/>
     <Button className={styles.button} onClick={handleSubmit} icon={<CheckOutlined size={30}/>}>Verify</Button>
     <button onClick={navback} className={styles.button1}>Back</button><br/>
     </Col>
