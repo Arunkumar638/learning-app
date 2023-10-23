@@ -51,6 +51,7 @@ import { UserOutlined, UserAddOutlined, EyeInvisibleOutlined, EyeTwoTone, PhoneO
     save(signupDetails).then((data)=>{
       alert(data.msg);
     });
+    clear();
   }
   const handleSignupChange = (e: any) => {
     const { name, value } = e.target;
@@ -71,9 +72,11 @@ import { UserOutlined, UserAddOutlined, EyeInvisibleOutlined, EyeTwoTone, PhoneO
 
   const handleLogin = (e: any) =>{
     e.preventDefault();
+    console.log(loginDetails);
     loginAction(loginDetails).then((data)=>{
       console.log(data);
       alert(data.msg);
+      loginClear();
       const token  = data.token
       console.log(token);
       localStorage.setItem('token',token);
@@ -90,13 +93,22 @@ import { UserOutlined, UserAddOutlined, EyeInvisibleOutlined, EyeTwoTone, PhoneO
     //setIsChecked(e.target.checked);
   };
 
-  // const clear = ()=>{
-  //   setLoginDetails({
-  //     userEmail:"",
-  //     userPassword:""
-  //   });
-  // }
- 
+  const loginClear = ()=>{
+    setLoginDetails({
+      userEmail:"",
+      userPassword:""
+    });
+  }
+  const clear = () =>{
+    setSignupDetails({
+      firstName:'',
+      lastName:'',
+      email:'',
+      password:'',
+      phoneNumber:'',
+      gender:genderNames[0].value,
+    })
+  }
   const navgot = ()=>{
     router.push('/forgot')
   }
