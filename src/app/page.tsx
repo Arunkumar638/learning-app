@@ -6,6 +6,7 @@ import styles from '../styles/style.module.css';
 import { Row, Col, Button, Image, Avatar } from 'antd';
 import { Footer, Header } from 'antd/es/layout/layout';
 import {CopyrightOutlined} from '@ant-design/icons';
+
  function Home() {
   
   const router = useRouter();
@@ -13,7 +14,6 @@ import {CopyrightOutlined} from '@ant-design/icons';
     router.push('/login');
   }
   return (
-
     <div className='bg-white'>
 
         <Header className='flex flex-row bg-slate-100'>

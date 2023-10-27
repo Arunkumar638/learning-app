@@ -3,6 +3,7 @@
 import React,{useState} from 'react';
 import { useRouter } from 'next/navigation'
 import {BiSolidUserCircle} from 'react-icons/bi';
+import {FaPhone} from 'react-icons/fa6';
 import {loginAction} from '../../actions/userActions';
 import styles from '../../styles/login.module.css';
 import { Card, Input, Button, Col } from 'antd';
@@ -10,7 +11,7 @@ import { Checkbox } from 'antd';
 import type { CheckboxChangeEvent } from 'antd/es/checkbox';
 import{ MdPassword } from 'react-icons/md';
 import {save} from '../../actions/userActions'
-import { UserOutlined, UserAddOutlined, EyeInvisibleOutlined, EyeTwoTone, PhoneOutlined, MailOutlined, LoginOutlined } from '@ant-design/icons';
+import { UserOutlined, UserAddOutlined, EyeInvisibleOutlined, EyeTwoTone, MailOutlined, LoginOutlined } from '@ant-design/icons';
 
  function Login() {
   const router = useRouter();
@@ -132,7 +133,7 @@ import { UserOutlined, UserAddOutlined, EyeInvisibleOutlined, EyeTwoTone, PhoneO
           onChange={handleSignupChange} 
           value={signupDetails.firstName} 
           prefix={<BiSolidUserCircle/>} 
-          className={styles.input1}/>
+          className={styles.input}/>
 
           <Input 
           placeholder='Lastname' 
@@ -141,7 +142,7 @@ import { UserOutlined, UserAddOutlined, EyeInvisibleOutlined, EyeTwoTone, PhoneO
           onChange={handleSignupChange} 
           value={signupDetails.lastName} 
           prefix={<BiSolidUserCircle/>} 
-          className={styles.input1}/>
+          className={styles.input}/>
 
           <Input 
           placeholder='Email' 
@@ -150,10 +151,10 @@ import { UserOutlined, UserAddOutlined, EyeInvisibleOutlined, EyeTwoTone, PhoneO
           onChange={handleSignupChange} 
           value={signupDetails.email} 
           prefix={<MailOutlined/>} 
-          className={styles.input1}/>
+          className={styles.input}/>
           
           <Input.Password 
-          className={styles.input1}
+          className={styles.input}
           size='large'
           value={signupDetails.password}
           prefix={<MdPassword/>}
@@ -168,8 +169,8 @@ import { UserOutlined, UserAddOutlined, EyeInvisibleOutlined, EyeTwoTone, PhoneO
           name='phoneNumber' 
           onChange={handleSignupChange} 
           value={signupDetails.phoneNumber} 
-          prefix={<PhoneOutlined/>} 
-          className={styles.input1}/><br/>
+          prefix={<FaPhone/>} 
+          className={styles.input}/><br/>
 
           <select value={selected} onChange={optionChange} 
           className={styles.dropdown}>
@@ -182,17 +183,17 @@ import { UserOutlined, UserAddOutlined, EyeInvisibleOutlined, EyeTwoTone, PhoneO
 
           <Checkbox onChange={onChange} className={styles.check}><span className='mr-8'>Accept Terms & Conditions</span></Checkbox><br/>
           <Button className={styles.button} onClick={handleSignup} icon={<LoginOutlined size={30}/>}>Sign Up</Button>
-          </Col> : <Col className={styles.align}>
-
+          </Col> : 
+          <Col className={styles.align}>
           <Input placeholder='Email' 
           size='large' name='userEmail' 
           onChange={handleLoginChange} 
           value={loginDetails.userEmail} 
           prefix={<MailOutlined/>} 
-          className={styles.input1}/>
+          className={styles.input}/>
 
           <Input.Password 
-          className={styles.input1}
+          className={styles.input}
           size='large'
           prefix={<MdPassword/>}
           placeholder="Password"          
@@ -203,8 +204,8 @@ import { UserOutlined, UserAddOutlined, EyeInvisibleOutlined, EyeTwoTone, PhoneO
           />
           <button onClick={navgot} className={styles.button1}>Forgot Password?</button><br/>
           <Checkbox onChange={onChange} className={styles.check1}>Remember Me</Checkbox><br/>
-          <Button className={styles.button } onClick={handleLogin} icon={<LoginOutlined size={30}/>}>Sign In</Button>
-          <div className='mt-7 h-card shadow-lg rounded-lg bg-white w-bottom-element ml-element'>
+          <Button className={styles.button} onClick={handleLogin} icon={<LoginOutlined size={30}/>}>Sign In</Button>
+          <div className={styles.box}>
             <span className='text-grey text-l font-roboto'>Don't have an account?</span>
             <button onClick={()=>setIsSignup(true)} className={styles.button2}>Sign Up</button>
           </div>

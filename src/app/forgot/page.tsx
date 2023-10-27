@@ -7,7 +7,8 @@ import styles from '../../styles/forgot.module.css'
 import { useRouter } from 'next/navigation';
 import { Card, Input, Col, Button } from 'antd';
 import {MailOutlined, CheckOutlined} from '@ant-design/icons'
-export default function forgot(){
+
+export default function Forgot(){
   const router = useRouter();
   const [details, setDetails] = React.useState({
     email:"",

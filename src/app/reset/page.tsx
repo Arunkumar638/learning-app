@@ -9,7 +9,7 @@ import styles from '../../styles/reset.module.css';
 import { Card, Input, Button, Col } from 'antd';
 import { useRouter } from 'next/navigation';
 
-export default function reset(){
+export default function Reset(){
   const router = useRouter();
   const [details, setDetails] = React.useState({
     token:"",

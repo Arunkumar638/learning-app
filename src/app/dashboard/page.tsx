@@ -1,16 +1,10 @@
-import dynamic from 'next/dynamic';
-import React, { Suspense, lazy } from "react";
+import React, { Suspense, lazy } from 'react';
 
-//const RemoteDashboard = lazy(() =>  import("dashboard/static/chunks/primaryEntry.js/das"));
- const RemoteDashboard = lazy(() => import('dashboardApp/dashboard'));
-const dashboard = () => {
-  return (
-    <body>
-      <Suspense fallback={<div>Loading...</div>}>
-        {/* <RemoteDashboard /> */}
-      </Suspense>
-    </body>
-  );
-};
+const Dashboard = lazy(() => import("dashboardApp/dashboard"));
+// const Dashboard = lazy(() => import('next2/sampleComponent'));
 
-export default dashboard;
+<Suspense fallback={<div>Loading...</div>}>
+  <Dashboard />
+</Suspense>
+
+export default Dashboard;
